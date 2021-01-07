@@ -25,15 +25,20 @@ int binarySearch(int arr[], int left, int right, int x)
 
 int main()
 {
-    int arr[] = { 2, 3, 4, 10, 40 };
-    int x = 10;
+    int arr[] = { 11, 3, 14, 10, 40 };
+	int x = 10;
     int n = sizeof(arr) / sizeof(arr[0]);
+	sort(arr, arr + n);
     int result = binarySearch(arr, 0, n - 1, x);
 	if(result == -1){
 		cout << "No In The Array" << endl;
 	}
 	else{
 		cout << "Element present at index " << result;
+	}
+	cout<<endl;
+	for(int i =0 ; i<n;i++){
+		cout << arr[i] << endl;
 	}
     return 0;
 }
